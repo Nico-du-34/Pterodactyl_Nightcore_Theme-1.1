@@ -12,9 +12,9 @@ installTheme(){
     tar -cvf Pterodactyl_Nightcore_Themebackup.tar.gz pterodactyl
     echo "Installing theme..."
     cd /var/www/pterodactyl
-    rm -r Pterodactyl_Nightcore_Theme
-    git clone https://github.com/NoPro200/Pterodactyl_Nightcore_Theme.git
-    cd Pterodactyl_Nightcore_Theme
+    rm -r Pterodactyl_Nightcore_Theme-1.1
+    git clone https://github.com/Nico-du-34/Pterodactyl_Nightcore_Theme-1.1.git
+    cd Pterodactyl_Nightcore_Theme-1.1
     rm /var/www/pterodactyl/resources/scripts/Pterodactyl_Nightcore_Theme.css
     rm /var/www/pterodactyl/resources/scripts/index.tsx
     mv index.tsx /var/www/pterodactyl/resources/scripts/index.tsx
@@ -47,7 +47,7 @@ installThemeQuestion(){
 }
 
 repair(){
-    bash <(curl https://raw.githubusercontent.com/NoPro200/Pterodactyl_Nightcore_Theme/main/repair.sh)
+    bash <(curl https://raw.githubusercontent.com/Nico-du-34/Pterodactyl_Nightcore_Theme-1.1/main/install.sh)
 }
 
 restoreBackUp(){
