@@ -11,15 +11,15 @@ installTheme(){
     cd /var/www/
     tar -cvf Pterodactyl_Nightcore_Themebackup.tar.gz pterodactyl
     echo "Installing theme..."
-    cd /var/www/pterodactyl
+    cd /var/www/panel.anhosting.fr
     rm -r Pterodactyl_Nightcore_Theme-1.1
     git clone https://github.com/Nico-du-34/Pterodactyl_Nightcore_Theme-1.1.git
     cd Pterodactyl_Nightcore_Theme-1.1
-    rm /var/www/pterodactyl/resources/scripts/Pterodactyl_Nightcore_Theme.css
-    rm /var/www/pterodactyl/resources/scripts/index.tsx
-    mv index.tsx /var/www/pterodactyl/resources/scripts/index.tsx
-    mv Pterodactyl_Nightcore_Theme.css /var/www/pterodactyl/resources/scripts/Pterodactyl_Nightcore_Theme.css
-    cd /var/www/pterodactyl
+    rm /var/www/panel.anhosting.fr/resources/scripts/Pterodactyl_Nightcore_Theme.css
+    rm /var/www/panel.anhosting.fr/resources/scripts/index.tsx
+    mv index.tsx /var/www/panel.anhosting.fr/resources/scripts/index.tsx
+    mv Pterodactyl_Nightcore_Theme.css /var/www/panel.anhosting.fr/resources/scripts/Pterodactyl_Nightcore_Theme.css
+    cd /var/www/panel.anhosting.fr
 
     curl -sL https://deb.nodesource.com/setup_18.x | sudo -E bash -
     apt update
@@ -28,7 +28,7 @@ installTheme(){
     npm i -g yarn
     yarn
 
-    cd /var/www/pterodactyl
+    cd /var/www/panel.anhosting.fr
     yarn build:production
     sudo php artisan optimize:clear
 
@@ -56,7 +56,7 @@ restoreBackUp(){
     tar -xvf Pterodactyl_Nightcore_Themebackup.tar.gz
     rm Pterodactyl_Nightcore_Themebackup.tar.gz
 
-    cd /var/www/pterodactyl
+    cd /var/www/panel.anhosting.fr
     yarn build:production
     sudo php artisan optimize:clear
 }
