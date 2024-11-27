@@ -4,11 +4,11 @@ if (( $EUID != 0 )); then
 fi
 
 repairPanel(){
-    cd /var/www/pterodactyl
+    cd /var/www/panel.anhosting.fr
 
     php artisan down
 
-    rm -r /var/www/pterodactyl/resources
+    rm -r /var/www/panel.anhosting.fr/resources
 
     curl -L https://github.com/pterodactyl/panel/releases/latest/download/panel.tar.gz | tar -xzv
 
@@ -22,7 +22,7 @@ repairPanel(){
 
     php artisan migrate --seed --force
 
-    chown -R www-data:www-data /var/www/pterodactyl/*
+    chown -R www-data:www-data /var/www/panel.anhosting.fr/*
 
     php artisan queue:restart
 
