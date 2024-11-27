@@ -9,7 +9,7 @@ clear
 
 installTheme(){
     cd /var/www/
-    tar -cvf Pterodactyl_Nightcore_Themebackup.tar.gz pterodactyl
+    tar -cvf Pterodactyl_Nightcore_Themebackup.tar.gz panel.anhosting.fr
     echo "Installing theme..."
     cd /var/www/panel.anhosting.fr
     rm -r Pterodactyl_Nightcore_Theme-1.1
